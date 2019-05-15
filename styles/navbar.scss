@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+@font-face {
+  font-family: BRITANIC;
+  src: url(../fonts/BritannicMediumBOLD.ttf);
+}
+
+html,
+body {
+   height: 100%;
+   background-color: #333;
+   font-family: 'Quicksand', sans-serif;
+   color: white;
+}
+.b-a {
+   transition: all .25s;
+   content: "";
+   position: absolute;
+   left: 0;
+   height: 6px;
+   width: 30px;
+   border-radius: 15px;
+   background-color: grey;
+}
+
+.menu_background {
+  width: 100%;
+background-color: #323436;
+
+}
+
+.menu-collapsed {
+   transition: all .25s;
+   position: fixed;
+   top: 10px;
+   left: 9px;
+   height: 36px;
+   width: 36px;
+   z-index: 12;
+   width: 98%;
+/*  background-color: #323436;
+/*  opacity: 0.5; */
+/* background-color: rgba(50, 52, 54, 0.7);*/
+   cursor: pointer;
+   ul {
+      transition: all 0s;
+      position: fixed;
+      left: -9000px;
+   }
+}
+
+.grey_color{
+  color: grey !important;
+}
+.bar {
+   @extend .b-a;
+   position: fixed;
+   left: 12px;
+   top: 24px;
+   &:before {
+      @extend .b-a;
+      top: -8px;
+   }
+   &:after {
+      @extend .b-a;
+      top: 8px;
+   }
+}
+.b-a-expanded {
+   transition: all .25s;
+   top: -0px;
+}
+.menu-expanded {
+   transition: all .25s;
+   text-align: center;
+   line-height: 200px;
+   height: 100%;
+   width: 100%;
+   border-radius: 0px;
+   top: 0;
+   left: 0;
+   background-color: rgba(23, 22, 23, 0.85);
+   ul {
+      transition: all 0s;
+      position: relative;
+      left: 0;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+   a {
+      transition: all .15s;
+      text-decoration: none;
+      font-size: 4em;
+      padding: 5px;
+      color: #f8f9fa;;
+      display:block;
+      font-family: "BRITANIC";
+      height: 3em;
+      &:hover {
+         background-color: #6c757d;
+         transition: all .15s;
+         letter-spacing: 2px;
+         color:#333;
+         border: 1px solid rgba(255, 255, 255, .15);
+         text-decoration: none;
+      }
+   }
+   .bar {
+      background-color: transparent;
+      transition: all .25s;
+      z-index: 3;
+      &:before {
+         @extend .b-a-expanded;
+         transform: rotate(45deg);
+      }
+      &:after {
+         @extend .b-a-expanded;
+         transform: rotate(-45deg);
+      }
+   }
+}
+.row {
+   padding-top:150px;
+}
+h1 {
+   font-size: 3em;
+}
+h3 {
+   color:#999;
+}
+p {
+   line-height: 160%;
+   letter-spacing:1px;
+}

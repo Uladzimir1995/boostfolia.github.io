@@ -3,8 +3,8 @@
   <head>
 
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/bootstrap.css">
-    <link rel="stylesheet" href="./gulp/gulpfile.js">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -29,7 +29,23 @@
               <div class="header__tittle">BOOSTFOLIA</div>
             </div>
             <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 header__rigth">
-              <img class="header__menu" src="./images/menu.png" alt="menu">
+
+              <!-- навигационный бар -->
+
+              <div class="menu_background">
+              <div class="menu-collapsed">
+                 <div class="grey_color bar"></div>
+                 <nav>
+                    <ul>
+                      <li class="sizer_menu"><a href="home.html">PAGE 1</a></li>
+                      <li class="sizer_menu"><a href="resume.html">PAGE 2</a></li>
+                      <li class="sizer_menu"><a href="portfolio.html">PAGE 3</a></li>
+                      <li class="sizer_menu"><a href="contact.html">PAGE 4</a></li>
+                    </ul>
+                 </nav>
+              </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -175,10 +191,12 @@
         <div class="red__background">
           <div class="container red__container">
             <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-6 red__pic_cont">
-              <img class="col-sm-12 col-md-12 col-lg-12 col-xl-12 red__redpic" src="./images/red_pic1.png" alt="red1">
+              <a href="./images/red_pic1.png" onclick=this.target='_blank'><img class="col-sm-12 col-md-12 col-lg-12 col-xl-12 red__redpic" src="./images/red_pic1.png" alt="red1"></a>
+              <a class="non_dec" href=""><div class="blog_posts__inside_blocks_up_hover">Details Of The Blog</div></a>
             </div>
             <div class="container col-sm-12 col-md-12 col-lg-12 col-xl-6 red__pic_cont">
-              <img class="col-sm-12 col-md-12 col-lg-12 col-xl-12 red__redpic" src="./images/red_pic2.png" alt="red2">
+              <a href="./images/red_pic2.png" onclick=this.target='_blank'><img class="col-sm-12 col-md-12 col-lg-12 col-xl-12 red__redpic" src="./images/red_pic2.png" alt="red2"></a>
+              <a class="non_dec" href=""><div class="blog_posts__inside_blocks_up_hover">Details Of The Blog</div></a>
             </div>
           </div>
         </div>
@@ -193,17 +211,17 @@
 
               <div class="carousel-item active">
                   <div class="main_black">
-                    <img class="black__pictures" src="./images/black.png" alt="blackpic">
+                    <div class="black__pictures">Here can be the information 1</div>
                   </div>
               </div>
               <div class="carousel-item">
                 <div class="main_black">
-                    <img class="black__pictures" src="./images/black.png" alt="blackpic">
+                  <div class="black__pictures">Here can be the information 2</div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="main_black">
-                  <img class="black__pictures" src="./images/black.png" alt="blackpic">
+                  <div class="black__pictures">Here can be the information 3</div>
                 </div>
               </div>
 
@@ -397,8 +415,8 @@
 
           <div class="container blog_posts__inside_blocks">
             <div class="blog_posts__inside_blocks_up">
-              <img class="blog_posts__inside_blocks_up_hover" src="./images/hover.png" alt="hover_buttoms">
-            </div>
+              <img class="blog_posts__inside_blocks_up_image" src="./images/image2.jpg" alt="image2">
+              <a class="non_dec" href="#"><div class="blog_posts__inside_blocks_up_hover">Details Of The Blog</div></a>            </div>
             <div class="blog_posts__inside_blocks_down">
               <div class="blog_posts__inside_blocks_down_title">Creat Creative & Clean</div>
               <div class="blog_posts__inside_blocks_down_comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -412,8 +430,8 @@
 
           <div class="container blog_posts__inside_blocks">
             <div class="blog_posts__inside_blocks_up">
-              <img class="blog_posts__inside_blocks_up_hover" src="./images/hover.png" alt="hover_buttoms">
-            </div>
+              <img class="blog_posts__inside_blocks_up_image" src="./images/image2.jpg" alt="image2">
+              <a class="non_dec" href="#"><div class="blog_posts__inside_blocks_up_hover">Details Of The Blog</div></a>            </div>
             <div class="blog_posts__inside_blocks_down">
               <div class="blog_posts__inside_blocks_down_title">Make A Sleek Break</div>
               <div class="blog_posts__inside_blocks_down_comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -427,7 +445,8 @@
 
           <div class="container blog_posts__inside_blocks">
             <div class="blog_posts__inside_blocks_up">
-              <img class="blog_posts__inside_blocks_up_hover" src="./images/hover.png" alt="hover_buttoms">
+              <img class="blog_posts__inside_blocks_up_image" src="./images/image2.jpg" alt="image2">
+              <a class="non_dec" href="#"><div class="blog_posts__inside_blocks_up_hover">Details Of The Blog</div></a>
             </div>
             <div class="blog_posts__inside_blocks_down">
               <div class="blog_posts__inside_blocks_down_title">Creative Manipulations</div>
@@ -559,21 +578,58 @@
                 <div class="get_in_touch_form">
                   <form>
                   <label class="name1" for="fname">NAME<span class="orange">*</span></label>
-                  <input type="text" class="name" name="fname">
+                  <input type="text" placeholder="Enter your Name" class="name" name="fname">
                   </form>
                 </div>
                 <div class="get_in_touch_form">
                   <form>
                   <label class="name1">MAIL<span class="orange">*</span></label>
-                  <input type="text" class="name" name="lname">
+                  <input type="mail" placeholder="Enter your E-mail adress" class="name" name="lname">
+                  </form>
+                </div>
+                <div class="get_in_touch_form">
+                  <form>
+                  <label class="name1">PHONE<span class="orange">*</span></label>
+                  <input type="text" placeholder="Enter your full phone number" class="name" name="lname">
+                  </form>
+                </div>
+                <div class="get_in_touch_form">
+                  <form>
+                  <label class="name1">FACEBOOK<span class="orange">*</span></label>
+                  <input type="text" placeholder="Enter your FaceBook data" class="name" name="lname">
                   </form>
                 </div>
                 <div class="get_in_touch_comment">
                   <form class="form1">
                   <label class="name1">MESSAGE<span class="orange">*</span></label>
-                  <input type="text" class="comment" name="lname">
+                  <input type="text" placeholder="You can write here a message" class="comment" name="lname">
                   </form>
                 </div>
+                <div class="drop_down_block">
+                <label class="name1">Choose the comfortable way to connet you<span class="orange">*</span></label>
+                <label class="dropdown">
+                  <div class="dd-button">
+                    Choose
+                  </div>
+                    <input type="checkbox" class="dd-input" id="test">
+                  <ul class="dd-menu">
+                    <li id="telegram">Telegram</li>
+                    <li id="social">Another WebSocial</li>
+                  </ul>
+                </label>
+              </div>
+              <div id="view_click1" class="view_click1 get_in_touch_form">
+                <form>
+                <label class="name1">TELEGRAM<span class="orange">*</span></label>
+                <input type="text" placeholder="Enter you Nick or Phone number" class="name" name="lname">
+                </form>
+              </div>
+              <div id="view_click2" class="view_click2 get_in_touch_form">
+                <form>
+                <label class="name1">SOCIAL WEB<span class="orange">*</span></label>
+                <input type="text" placeholder="Enter your link or Name & Surname" class="name" name="lname">
+                </form>
+              </div>
 
             </div>
 
@@ -605,11 +661,11 @@
 </div>
 
 <!-- конееццц -->
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/dropdown.js"></script>
 
   </body>
 </html>
