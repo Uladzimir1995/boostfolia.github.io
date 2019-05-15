@@ -391,14 +391,14 @@ $main_size: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 576px;
+  background-color: #6c757d;
 
   }
 
 .red__pic_cont {
   background-color: #6c757d;
   padding-bottom: 15px !important;
-  padding-top: 15px !important;
-  max-height: 565px;
   &:hover{
     .blog_posts__inside_blocks_up_hover {
       display: block;
