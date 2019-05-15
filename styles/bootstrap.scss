@@ -220,6 +220,7 @@ $main_size: 1200px;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .video__central_block_left {
@@ -391,9 +392,9 @@ $main_size: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 576px;
+  min-height: 600px;
   background-color: #6c757d;
-
+  padding-top: 20px !important;
   }
 
 .red__pic_cont {
